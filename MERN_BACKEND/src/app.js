@@ -40,7 +40,7 @@ app.get("/hire", (req,res) => {
 app.get("/end",(req,res) => {
     res.render("homepage1");
 });
-//Create a new user in our DATABASE
+//Creating a new user in our DATABASE
 app.post("/register",async (req , res) => {
     try {
        const password = req.body.password;
@@ -67,7 +67,7 @@ app.post("/register",async (req , res) => {
         res.status(400).send(error);
     }
 });
-//LOGIN CHECK
+//CHECKING FOR LOGIN
 app.post("/login", async (req , res) => {
     try {
         const email = req.body.email;
